@@ -1,6 +1,9 @@
 # Node
 node_modules
 
+# Typings
+typings
+
 # TypeScript
 src/**/*.js
 test/**/*.js
