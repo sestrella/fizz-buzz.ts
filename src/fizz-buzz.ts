@@ -1,14 +1,30 @@
 "use strict";
 
-export default function(num: number): string {
-  if (num % 3 === 0 && num % 5 === 0) {
-    return "fizz buzz";
-  }
-  if (num % 3 === 0) {
-    return "fizz";
-  }
-  if (num % 5 === 0) {
-    return "buzz";
-  }
-  return num.toString();
+export default function(x: number): string {
+  return transformers.reduce((result, transformer) => {
+    if (transformer.apply(x)) {
+      result.push(transformer.transform(x));
+    }
+    return result;
+  }, []).join(" ");
+}
+
+const transformers: Transformer[] = [{
+  apply: x => isDivisibleBy(x, 3),
+  transform: () => "fizz"
+}, {
+  apply: x => isDivisibleBy(x, 5),
+  transform: () => "buzz"
+}, {
+  apply: x => !(isDivisibleBy(x, 3) || isDivisibleBy(x, 5)),
+  transform: x => x.toString()
+}];
+
+interface Transformer {
+  apply: (x: number) => boolean;
+  transform: (x: number) => string;
+}
+
+function isDivisibleBy(x: number, y: number): boolean {
+  return x % y === 0;
 }
