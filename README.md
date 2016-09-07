@@ -1,5 +1,7 @@
 # Fizz Buzz
 
+[![Build Status](https://travis-ci.org/sestrella/fizz-buzz.ts.svg?branch=master)](https://travis-ci.org/sestrella/fizz-buzz.ts)
+
 Clone the repository:
 
 ```
