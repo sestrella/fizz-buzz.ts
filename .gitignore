@@ -1,1 +1,6 @@
+# Node
 node_modules
+
+# TypeScript
+src/**/*.js
+test/**/*.js
