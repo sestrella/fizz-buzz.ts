@@ -10,5 +10,5 @@ export default function(num: number): string {
   if (num % 5 === 0) {
     return "buzz";
   }
-  return null;
+  return num.toString();
 }

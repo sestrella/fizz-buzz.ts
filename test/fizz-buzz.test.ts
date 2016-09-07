@@ -22,4 +22,10 @@ describe("fizzBuzz", function() {
       expect(fizzBuzz(15)).to.be.equal("fizz buzz");
     });
   });
+
+  context("when the number is not divisible by 3 or 5", function() {
+    it("returns the number as string", function() {
+      expect(fizzBuzz(1)).to.be.equal("1");
+    });
+  });
 });
