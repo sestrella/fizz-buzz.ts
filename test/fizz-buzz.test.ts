@@ -10,4 +10,10 @@ describe("fizzBuzz", function() {
       expect(fizzBuzz(3)).to.be.equal("fizz");
     });
   });
+
+  context("when the number is divisible by 5", function() {
+    it("returns buzz", function() {
+      expect(fizzBuzz(5)).to.be.equal("buzz");
+    });
+  });
 });
