@@ -12,7 +12,7 @@ Install `node` version using [nvm](https://github.com/creationix/nvm):
 $ nvm install
 ```
 
-Switch to node version defined at `.nvmrc`:
+Switch to `node` version defined at `.nvmrc`:
 
 ```
 $ nvm use
@@ -22,7 +22,7 @@ Install dependencies:
 
 ```
 $ npm install
-``
+```
 
 Run the tests:
 
